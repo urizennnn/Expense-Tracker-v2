@@ -1,0 +1,46 @@
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        background-image: url("/home/expense-tracker.png"); /* Replace with the correct path to your image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: lightgreen;
+      }
+      h2 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      section {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners for the section */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+      }
+      .about {
+        margin-bottom: 20px;
+        padding: 12px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .re-route {
+        display: block;
+        width: 180px;
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .re-route:hover {
+        background-color: #45a049;
+      }
+   

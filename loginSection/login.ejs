@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      img {
+        max-width: 300px;
+        border-radius: 10px;
+      }
+
+      .wrapper {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-box {
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .login {
+        width: 150px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .login:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <img type="img/jpeg" src="./expense-tracker.jpeg" alt="Expense Tracker" />
+    <div class="wrapper">
+      <h2>Login</h2>
+      <form action="/home" method="post">
+        <div class="input-box">
+          <input
+            type="text"
+            class="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            class="password"
+            placeholder="Confirm password"
+            required
+          />
+        </div>
+        <button type="submit" class="login">Login</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    "use strict";
+    const storedname = localStorage.getItem("username");
+    const storedPass = localStorage.getItem("password");
+    const inputUsername = document.querySelector(".username");
+    const inputPassword = document.querySelector(".password");
+    const loginBtn = document.querySelector(".login");
+
+    loginBtn.addEventListener("click", (e) => {
+      const enteredUsername = inputUsername.value;
+      const enteredPassword = inputPassword.value;
+
+      if (enteredUsername !== storedname || enteredPassword !== storedPass) {
+        alert("User not found, please check your details again");
+        e.preventDefault();
+      } else {
+        // If both username and password are correct, submit the form
+        document.querySelector("form").submit();
+      }
+    });
+  </script>
+</html>

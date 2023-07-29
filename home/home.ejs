@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urizen's Expense Tracker App - Welcome</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        background-image: url("/home/expense-tracker.png"); /* Replace with the correct path to your image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: lightgreen;
+      }
+      h2 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      section {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners for the section */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+      }
+      .about {
+        margin-bottom: 20px;
+        padding: 12px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .re-route {
+        display: block;
+        width: 180px;
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .re-route:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome to the Urizen's Expense Tracker App</h2>
+    <form action="/register" method="get">
+      <section>
+        <div class="about">
+          In this version of the Expense Tracker App, you will be able to sign
+          in as a new user, and you can also log out and sign in again to ensure
+          your details are not accessed by third parties.
+        </div>
+        <p>
+          Please note that this feature is limited to one user per device. If
+          another user attempts to log in, the previous user's information will
+          be automatically cleared.
+        </p>
+        <p>
+          What are you waiting for? Click the button below and start tracking
+          your expenses today!
+        </p>
+      </section>
+      <button class="re-route" type="submit">GET STARTED</button>
+    </form>
+  </body>
+</html>
